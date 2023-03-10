@@ -1,0 +1,16 @@
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+**/__pycache__
+**/postgres-data
+
+.mvn/wrapper/maven-wrapper.jar
+
+.idea
+.vscode
+
+cmake-build-debug
+cmake-build
+build
+target
+

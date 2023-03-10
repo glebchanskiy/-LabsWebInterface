@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>main page</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+
+    <h2> Labs Web Interface </h2>
+    <br/>
+
+    <form th:method="POST" th:action="@{/main}" th:object="${message}">
+        <label for="name">Введите формулу</label>
+        <input type="text" th:field="*{content}" id="name"/>
+
+        <div th:if="${answer != null}">
+            <p th:text="${answer.getContent()}" class="answer">[answer]</p>
+        </div>
+
+        <input type="submit" value="Enter" class="btn"/>
+    </form>
+
+
+
+
+</body>
+</html>
